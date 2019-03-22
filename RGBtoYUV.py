@@ -17,8 +17,8 @@ hg=resim.size[1]
 for i in range(w):
    for j in range(hg):
        r, g, b = resim.getpixel((i, j))
-       h, s, v = rgbtoyuv(r, g, b)
-       resim_pix[i,j] = (h, s, v)
+       y, u, v = rgbtoyuv(y, u, v)
+       resim_pix[i,j] = (y, u, v)
 resim.save("yuv_new.jpg")
 resim.show()
 
